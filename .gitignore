@@ -1,0 +1,6 @@
+.atom/.apm/
+.atom/compile-cache/
+.atom/npm-debug.log
+.atom/packages/
+.atom/projects.cson
+.atom/config.cson
