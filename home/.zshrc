@@ -49,7 +49,7 @@ ZSH_THEME="candy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(brew brew-cask cdd gem git rbenv vagrant)
+plugins=(brew brew-cask cdd gem git rbenv vagrant pip)
 
 # User configuration
 
@@ -103,9 +103,17 @@ compinit -u
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if [ -f $(brew --prefix)/etc/brew-wrap ];then
+    source $(brew --prefix)/etc/brew-wrap
+fi
+
 function _ssh {
     compadd `fgrep 'Host ' ~/.ssh/config | awk '{print $2}' | sort`;
 }
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+export PYENV_ROOT=/usr/local/var/pyenv
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+eval "$(pipenv --completion)"

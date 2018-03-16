@@ -19,3 +19,75 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
+'.source.ts':
+  'pixi-flash react components':
+    'prefix': 'pixifl'
+    'body': """
+import * as ReactPIXI from 'react-pixi';
+
+
+export interface $1Props extends ReactPIXI.IDisplayObjectProps {
+}
+
+
+function unbindProps(dobj: animate.$2, props: $1Props) {
+    return dobj;
+}
+
+
+function bindProps(dobj: animate.$2, props: $1Props) {
+    return dobj;
+}
+
+
+export const $1 = ReactPIXI.CustomPIXIComponent({
+    customDisplayObject: (props: $1Props) => {
+        return new animate.$2();
+    },
+    customDidAttach: (dobj: animate.$2) => {
+        dobj.play();
+    },
+    customApplyProps: (dobj: animate.$2, op: $1Props, np: $1Props) => {
+        bindProps(unbindProps(dobj, op), np);
+    },
+    customWillDetach: (dobj: animate.$2) => {
+        dobj.stop();
+    },
+});
+"""
+'.source.tsx':
+  'pixi react scene':
+    'prefix': 'pixisc'
+    'body': """
+import * as React from 'react';
+import { connect } from 'react-redux';
+import { Scene } from '../scene';
+import { State } from '../../reducers';
+
+
+export interface $1Props {
+}
+
+
+export interface $1ExpProps {
+}
+
+
+const mapStateToProps = (state: State): $1Props => ({
+});
+
+
+const mapDispatchToProps = (dispatch: Redux.Dispatch<any>): $1ExpProps => ({
+});
+
+
+@connect(mapStateToProps, mapDispatchToProps)
+export class $1 extends Scene<$1Props & $1ExpProps> {
+    render() {
+        return (
+            <div>
+            </div>
+        );
+    }
+}
+"""

@@ -1,31 +1,88 @@
-tap 'caskroom/cask'
-tap 'caskroom/versions'
-tap 'homebrew/binary'
-tap 'homebrew/bundle'
-brew 'ansible'
-brew 'docker'
-brew 'boot2docker'
-brew 'git'
-brew 'imagemagick'
-brew 'node'
-brew 'tmux'
-brew 'trash'
-brew 'tree'
-brew 'zsh'
-brew 'zsh-completions'
-brew 'vim'
-cask 'atom'
-cask 'chefdk'
-cask 'dropbox'
-cask 'firefox-ja'
-cask 'google-chrome'
-cask 'google-drive'
-cask 'hipchat'
-cask 'iterm2'
-cask 'kindle'
-cask 'skype'
-cask 'slack'
-cask 'sequel-pro'
-cask 'vagrant'
-cask 'virtualbox'
-cask 'vlc'
+
+# tap repositories and their packages
+
+tap argon/mas
+
+tap caskroom/cask
+
+tap caskroom/versions
+
+tap homebrew/binary
+
+tap homebrew/bundle
+
+tap homebrew/php
+
+# Other Homebrew packages
+brew PHP56
+brew android-sdk
+brew ansible
+brew autoconf
+brew composer
+brew docker
+brew docker-compose
+brew docker-machine
+brew elixir
+brew erlang
+brew freetype
+brew gdbm
+brew gettext
+brew git
+brew graphviz
+brew icu4c
+brew imagemagick
+brew jpeg
+brew libpng
+brew libtiff
+brew libxml2
+brew libyaml
+brew mas
+brew minio-mc
+brew mono
+brew mysql
+brew node
+brew openssl
+brew php56
+brew pipenv
+brew pkg-config
+brew pyenv
+brew pyenv-virtualenv
+brew python
+brew python3
+brew readline
+brew redis
+brew ruby
+brew sqlite
+brew tmux
+brew trash
+brew tree
+brew unixodbc
+brew vim
+brew wxmac
+brew xz
+brew zsh
+brew zsh-completions
+
+# Cask applications
+cask atom
+cask chefdk
+cask cleanarchiver
+cask dotnet
+cask dropbox
+cask firefox-ja
+cask google-chrome
+cask google-drive
+cask hipchat
+cask iterm2
+cask java
+cask kindle
+cask libreoffice
+cask openoffice
+cask rdm
+cask sequel-pro
+cask skype
+cask slack
+cask vagrant
+cask virtualbox
+cask visual-studio-code
+cask vlc

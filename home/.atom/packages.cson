@@ -1,12 +1,9 @@
 packages: [
-  ".bin"
-  "atom-json-editor"
   "atom-runner"
   "atom-typescript"
   "autocomplete-elixir"
   "autocomplete-erlang"
   "autocomplete-python"
-  "browser-plus"
   "cake-syntax"
   "eclectic-syntax"
   "file-icons"
@@ -26,5 +23,4 @@ packages: [
   "python-tools"
   "rst-preview"
   "symbols-tree-view"
-  "terminal-plus"
 ]
