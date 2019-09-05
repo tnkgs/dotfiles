@@ -114,6 +114,7 @@ eval "$(pyenv init -)"
 eval "$(pipenv --completion)"
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH=$PATH:$USER_BASE_PATH/bin
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
     source $(brew --prefix)/etc/brew-wrap

@@ -19,6 +19,7 @@ brew "rbenv"
 brew "redis"
 brew "ruby", link: true
 brew "vim"
+brew "yarn"
 brew "zsh"
 brew "zsh-completions"
 brew "heroku/brew/heroku"
