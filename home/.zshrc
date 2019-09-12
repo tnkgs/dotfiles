@@ -114,6 +114,7 @@ eval "$(pyenv init -)"
 eval "$(pipenv --completion)"
 USER_BASE_PATH=$(python -m site --user-base)
 export PATH=$PATH:$USER_BASE_PATH/bin
+eval "$(rbenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 if [ -f $(brew --prefix)/etc/brew-wrap ];then
@@ -123,6 +124,9 @@ fi
 function _ssh {
     compadd `fgrep 'Host ' ~/.ssh/config | awk '{print $2}' | sort`;
 }
+
+# install mplab xc8
+export PATH="$PATH:"/Applications/microchip/xc8/v2.10/bin""
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
