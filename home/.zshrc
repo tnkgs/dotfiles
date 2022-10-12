@@ -101,4 +101,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-export NODEBREW_ROOT=/usr/local/var/nodebrew
+# export NODEBREW_ROOT=/usr/local/var/nodebrew
