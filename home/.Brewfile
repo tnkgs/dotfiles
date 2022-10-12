@@ -1,14 +1,11 @@
-cask_args appdir: "/Applications"
-
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-
 brew "git"
 brew "git-secrets"
-
-cask "google-chrome"
-cask "iterm2"
-cask "docker"
-cask "visual-studio-code"
+brew "nodebrew"
+cask "docker", args: { appdir: "/Applications" }
+cask "google-chrome", args: { appdir: "/Applications" }
+cask "iterm2", args: { appdir: "/Applications" }
+cask "visual-studio-code", args: { appdir: "/Applications" }
