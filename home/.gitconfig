@@ -1,7 +1,6 @@
-[http]
-	sslVerify = false
 [user]
-	name = kento
-	email = kento@leafage.co.jp
+	name = tnkgs
+	email = kento@kt-one.jp
+
 [core]
 	editor = /usr/bin/vim
